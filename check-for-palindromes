@@ -1,5 +1,4 @@
 function palindrome(str) {
-    
     var strMod= str.toLowerCase().replace('_','').split(/\W*/).join("");
     var len = strMod.length;
    
@@ -10,5 +9,4 @@ function palindrome(str) {
     }
     return true;
 }
-  
 palindrome("Race Car");
