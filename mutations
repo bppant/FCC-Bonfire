@@ -1,0 +1,22 @@
+function mutation(arr) {
+  
+  
+  var chkStr=  arr[1].toLowerCase();
+    
+  for(var i= 0; i<= chkStr.length-1; i++) {
+    
+     var chk= arr[0].toLowerCase().indexOf(chkStr.charAt(i)); 
+        
+    if(chk==-1) {
+      
+      return false;
+      
+    }
+      
+      
+    }
+     
+  return true;
+}
+
+mutation(["hello", "hey"]);
