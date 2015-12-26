@@ -1,0 +1,23 @@
+ function destroyer(arr) {
+  // Remove all the values
+  
+ var seekArr= [];
+ for(var j=1; j< arguments.length; j++){
+   seekArr.push(arguments[j]);
+ }
+ 
+  var destroyedArr= arguments[0].filter(function(element) { 
+  var flag= true;    
+    for(var i= 0; i< seekArr.length; i++) {           
+      if(element===seekArr[i]){
+        flag= false;
+      }
+    }
+   return flag;
+  });
+ 
+  return destroyedArr;
+  
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3); 
