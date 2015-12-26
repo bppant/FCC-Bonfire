@@ -5,5 +5,4 @@ function factorialize(num) {
       }
   return fact;
 }
-
 factorialize(0);
