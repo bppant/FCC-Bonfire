@@ -1,0 +1,17 @@
+function repeat(str, num) {
+  // repeat after me
+  var strFinal=[];
+  
+  for(var i=0; i<num; i++) {
+    
+    strFinal.push(str);
+          
+  }
+  
+   strFinal= strFinal.join('');
+  
+  return strFinal;
+  
+  }
+
+repeat("abc", 3);
