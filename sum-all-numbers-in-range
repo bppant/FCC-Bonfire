@@ -1,0 +1,17 @@
+function sumAll(arr) {
+  var maxNum= Math.max.apply(null,arr);
+  var minNum= Math.min.apply(null,arr);
+  var seqArr=[];
+  for(var i= minNum; i<= maxNum; i++){
+   
+   seqArr.push(i);
+    
+ }
+  
+  return seqArr.reduce(function (previousVal, currentVal){
+    
+    return previousVal + currentVal;
+  });
+}
+
+sumAll([1, 4]);
