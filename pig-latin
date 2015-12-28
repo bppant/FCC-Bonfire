@@ -1,0 +1,37 @@
+# Solution without using RegExp
+
+function translate(str) {
+ 
+  var pigLatin = [];
+  var vowels=["a", "e", "i", "o", "u"];
+  var i=0;
+  
+  while(vowels.indexOf(str[i]) == -1) {
+   
+    i++;
+  
+  }
+  
+  if(i===0) {
+    
+    pigLatin.push(str,"way");
+  }
+  
+  else {
+    
+    pigLatin.push(str.substr(i,str.length));
+                  
+    for(var j=0; j< i; j++) {
+    
+      pigLatin.push(str[j]);
+    
+    }
+    
+    pigLatin.push("ay");
+  
+  }
+  
+  return pigLatin.join('');
+}
+
+translate("california");
