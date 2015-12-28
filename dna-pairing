@@ -1,0 +1,38 @@
+#SOLUTION 1 WITHOUT USING OBJECTS
+
+function pair(str) {
+  
+ var splitStr= str.split('');
+ var pairOne = ["A", "T", "C", "G"];
+ var pairTwo = ["T", "A", "G", "C"];
+ var dnaStrand=[];
+ 
+ for(var i=0; i< splitStr.length; i++) {
+   
+  var pos= pairOne.indexOf(splitStr[i]);
+   
+  dnaStrand[i]= [splitStr[i], pairTwo[pos]];  
+   
+ }
+  
+  return dnaStrand;
+}
+
+pair("GCG");
+
+#SOLUTION 2 USING OBJECTS
+
+function pair(str) {
+  
+  var splitStr = str.split('');
+  var pairs = {T:'A', A:'T', G:'C', C:'G'};
+  var dnaStrand = [];
+ 
+  for (var i=0;i< splitStr.length;i++){
+    
+    dnaStrand[i]=[splitStr[i], pairs[splitStr[i]]];
+    
+  }
+ return dnaStrand;
+}
+pair("GCG"); 
