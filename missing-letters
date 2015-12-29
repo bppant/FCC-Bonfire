@@ -1,0 +1,20 @@
+function fearNotLetter(str) {
+  var i = 0;
+  var missed='';
+  var start= str.charCodeAt(0);
+  
+ while(i < str.length) {
+  
+   if(str[i] !== String.fromCharCode(start + i)) {
+     
+    return String.fromCharCode(start+i);
+    
+    }
+  i++;
+  }
+
+ return undefined;
+  
+}
+
+fearNotLetter("bcd");
