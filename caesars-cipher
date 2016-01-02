@@ -11,15 +11,15 @@ function rot13(encodedStr) {
     newCharCode = encodedStr.charCodeAt(i);
     }
     
-    else if(encodedStr.charCodeAt(i) > 77) {
+    else if(encodedStr.charCodeAt(i) <= 77) {
       
-     newCharCode = encodedStr.charCodeAt(i) - 13;
+     newCharCode = encodedStr.charCodeAt(i) + 13;
       
     }
     
     else {
       
-      newCharCode = encodedStr.charCodeAt(i) + 13;
+      newCharCode = encodedStr.charCodeAt(i) - 13;
     }
     
     decodedArr.push(String.fromCharCode(newCharCode));
