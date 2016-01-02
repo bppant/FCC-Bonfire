@@ -1,0 +1,31 @@
+ function where(collection, source) {
+  var arr = [];
+ 
+  // What's in a name?
+
+ var keyArr = Object.keys(source);   
+  
+ for(var name in collection) {
+   
+   var count = 0;
+   
+   for(var j=0; j< keyArr.length; j++) {
+  
+     if (collection[name].hasOwnProperty(keyArr[j]) === true && collection[name][keyArr[j]] == source[keyArr[j]]) {
+      
+       count+=1;
+       
+     }
+      
+   }
+        
+     if(count == keyArr.length){
+       
+       arr.push(collection[name]);
+     }
+  }   
+    
+return arr;
+} 
+
+where([{ "a": 1, "b": 2 }, { "a": 1 }, { "a": 1, "b": 2, "c": 2 }], { "a": 1, "b": 2 });
