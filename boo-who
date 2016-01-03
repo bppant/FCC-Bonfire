@@ -1,0 +1,18 @@
+#Solution 1 wihout using typeof
+function boo(bool) {
+  // What is the new fad diet for ghost developers? The Boolean.
+   if(bool === true | bool === false) { 
+    return true;
+  }
+  else {
+    return false;
+  }
+} 
+boo(false);
+
+#Solution 2 using typeof
+
+function boo(bool) {
+return typeof bool === 'boolean';
+}
+boo(false);
