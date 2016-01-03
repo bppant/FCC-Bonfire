@@ -1,0 +1,28 @@
+function sumFibs(num) {
+ var prevNum = 0; 
+ var nextNum = 1;
+ var oddSum = 0;
+
+  if(num < 1) {
+    
+    return false;
+    
+  }
+  
+  else {
+    
+    while(nextNum <= num) {
+      
+      if(nextNum % 2 !==0) {
+         oddSum+=nextNum;
+      }   
+      nextNum+=prevNum;
+      prevNum = nextNum - prevNum;
+     
+    }
+  }
+  
+  return oddSum;
+}
+
+sumFibs(4);
