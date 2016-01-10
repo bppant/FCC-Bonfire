@@ -1,0 +1,22 @@
+ #Solution 1
+ function convert(str) {
+ var newStr = str.replace(/[&]/g, '&amp;').replace(/[<]/g, '&lt;').replace(/[>]/g, '&gt;').replace(/[""]/g, '&quot;').replace(/[']/g, '&apos;');
+  return newStr; 
+  }
+convert("Dolce & Gabbana");
+  
+#Solution 2
+function convert(str) {
+  var html = {
+       "&":"&amp;",
+       "<":"&lt;",
+       ">":"&gt;",
+       "\"":"&quot;",
+       "\'":"&apos;"
+    };
+        str = str.replace(/&|<|>|"|'/gi, function(matched){
+        return html[matched];
+        });
+return str;
+}
+convert("Dolce & Gabbana");
