@@ -1,0 +1,14 @@
+function every(collection, pre) {
+  // Is everyone being true?
+  
+  for(var i=0; i< collection.length; i++){
+  var resp = collection[i][pre];  
+  if(resp === 0 || resp === null || resp === "" || resp ===undefined || Number.isNaN(resp) ===true){
+    return false;
+  }
+  }
+
+  return true;
+
+}
+every([{"single": "yes"}], "single");
